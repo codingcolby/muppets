@@ -1,25 +1,50 @@
 {
-  "name": "muppets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "react-router-dom": "^5.1.2"
+	"name": "muppets",
+	"version": "1.0.0",
+	"private": true,
+	"proxy": "http://localhost:5000",
+	"dependencies": {
+		"@material-ui/core": "^4.9.12",
+		"axios": "^0.19.2",
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"pg": "^8.0.3",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-redux": "^7.2.0",
+		"react-router-dom": "^5.1.2",
+		"react-scripts": "^3.4.1",
+		"redux": "^4.0.5",
+		"redux-logger": "^3.0.6",
+		"redux-saga": "^1.1.3"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.3"
+	},
+	"scripts": {
+		"start": "node server/server.js",
+		"build": "react-scripts build",
+		"client": "react-scripts start",
+		"server": "nodemon  --watch server server/server.js",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codingcolby/muppets.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codingcolby/muppets/issues"
-  },
-  "homepage": "https://github.com/codingcolby/muppets#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+
+
+	// "repository": {
+	// 	"type": "git",
+	// 	"url": "git+https://github.com/codingcolby/muppets.git"
+	// },
+	// "author": "",
+	// "license": "ISC",
+	// "bugs": {
+	// 	"url": "https://github.com/codingcolby/muppets/issues"
+	// },
+	// "homepage": "https://github.com/codingcolby/muppets#readme"
 }
