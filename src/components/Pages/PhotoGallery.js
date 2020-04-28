@@ -11,9 +11,11 @@ class PhotoGallery extends Component {
 		return (
 			<table>
 				<tbody>
-					{this.props.reduxState.galleryReducer.map((smiles, i) => {
+				
+					{GalleryPic}
+					{/* {this.props.reduxState.galleryReducer.map((smiles, i) => {
 						return (<GalleryPic key={i} smiles={smiles} />);
-					})}
+					})} */}
 				</tbody>
 			</table>
 		);

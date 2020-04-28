@@ -5,14 +5,11 @@ import React, { Component } from "react";
 class GalleryPic extends Component {
 	// Renders all the photos in the DB
 	render() {
-		const pictures = this.props.store.reduxState.imagefile
+		// const pictures = this.props.store.reduxState.imagefile
 		return (
 			<tr>
-				<td>{this.props.smiles.imagefile}
-				<img
-            src={this.props.store.galleryReducer.imagefile}
-            alt="some text goes here"
-          />
+				<td>
+				<img src="/image/public/image/kermit.jpg" alt="some text goes here"/>
 				
 				
 				</td>
