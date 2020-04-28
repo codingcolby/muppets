@@ -19,7 +19,7 @@ function* rootSaga() {
 // SAGAS
 function* allPhotos() {
 	try {
-		const response = yield axios.get("/api/wakah/");
+		const response = yield axios.get("/");
 		yield put({ type: "SHOW_GALLERY", payload: response.data });
 	} catch (err) {
 		console.log("Error in allPhotos:", err);
