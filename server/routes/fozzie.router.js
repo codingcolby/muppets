@@ -4,7 +4,7 @@ const pool = require("../modules/pool");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-	const queryText = "SELECT * FROM photos";
+	const queryText = 'SELECT "photos".imagefiles FROM "photos" AS smiles';
 	pool
 		.query(queryText)
 		.then((result) => {

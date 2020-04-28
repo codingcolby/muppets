@@ -1,31 +1,31 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import gallery from "../../index";
+import GalleryPic from "./GalleryPic";
 
-const mapStateToProps = (reduxState) => ({
-	reduxState,
-});
-
-class List extends Component {
+class PhotoGallery extends Component {
 	componentDidMount() {
-		this.props.dispatch({
-			type: "SHOWME_GALLERY",
-		});
+		const action = { type: "GET_GALLERY" };
+		this.props.dispatch(action);
 	}
 
 	render() {
-		const smiles = this.props.reduxState.gallery.map((item, index) => (
-			<div key={index}>
-				<gallery item={item} />
-			</div>
-		));
 		return (
 			<div>
 				<h3>Great Memories</h3>
-				<pre>{gallery}</pre>
+				<table>
+					<tbody>
+						{this.props.reduxState.galleryReducer.map((smiles, i) => {
+							return <GalleryPic key={i} smiles={smiles} />;
+						})}
+					</tbody>
+				</table>
 			</div>
 		);
 	}
 }
 
-export default connect(mapStateToProps)(List);
+const mapReduxStateToProps = (reduxState) => ({
+	reduxState,
+});
+
+export default connect(mapReduxStateToProps)(PhotoGallery);

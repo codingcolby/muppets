@@ -8,7 +8,8 @@ CREATE TABLE "cast" (
 CREATE TABLE "photos" (
 "photo_id" SERIAL PRIMARY KEY,
 "photo_title" VARCHAR(100),
-"photo_composition" VARCHAR(40)
+"photo_composition" VARCHAR(40),
+"imagefile" VARCHAR(120)
 );
 
 INSERT INTO "cast" ("name", "species", "about_info") VALUES

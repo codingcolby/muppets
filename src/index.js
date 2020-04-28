@@ -10,27 +10,27 @@ import logger from "redux-logger";
 import createSagaMiddleware from "redux-saga";
 import { takeEvery, put } from "redux-saga/effects";
 
-// SAGAS
-function* AllPhotos(action) {
-	try {
-		const response = yield axios.get(`/api/wakah`);
-		yield put({ type: "SHOWME_GALLERY", payload: response.data });
-	} catch (err) {
-		console.log("Error in AllPhotos:", err);
-	}
-}
-
 // Create the rootSaga generator function
 function* rootSaga() {
-	// ----- MOVIES YIELDS -----
-	yield takeEvery("SHOWME_GALLERY", AllPhotos);
+	// ----- PHOTOS YIELDS -----
+	yield takeEvery("GET_GALLERY", allPhotos);
+}
+
+// SAGAS
+function* allPhotos() {
+	try {
+		const response = yield axios.get("/api/wakah/");
+		yield put({ type: "SHOW_GALLERY", payload: response.data });
+	} catch (err) {
+		console.log("Error in allPhotos:", err);
+	}
 }
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
 // Used to store movies returned from the server
-const gallery = (state = [], action) => {
+const galleryReducer = (state = [], action) => {
 	switch (action.type) {
 		case "SHOW_GALLERY":
 			return action.payload;
@@ -42,7 +42,7 @@ const gallery = (state = [], action) => {
 // Create one store that all components can use
 const store = createStore(
 	combineReducers({
-		gallery,
+		galleryReducer,
 	}),
 	// Add sagaMiddleware to our store
 	applyMiddleware(sagaMiddleware, logger)
