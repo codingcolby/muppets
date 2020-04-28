@@ -4,22 +4,18 @@ import GalleryPic from "./GalleryPic";
 
 class PhotoGallery extends Component {
 	componentDidMount() {
-		const action = { type: "GET_GALLERY" };
-		this.props.dispatch(action);
+		this.props.dispatch({type: "GET_GALLERY"});
 	}
 
 	render() {
 		return (
-			<div>
-				<h3>Great Memories</h3>
-				<table>
-					<tbody>
-						{this.props.reduxState.galleryReducer.map((smiles, i) => {
-							return <GalleryPic key={i} smiles={smiles} />;
-						})}
-					</tbody>
-				</table>
-			</div>
+			<table>
+				<tbody>
+					{this.props.reduxState.galleryReducer.map((smiles, i) => {
+						return (<GalleryPic key={i} smiles={smiles} />);
+					})}
+				</tbody>
+			</table>
 		);
 	}
 }

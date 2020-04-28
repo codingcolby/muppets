@@ -13,14 +13,14 @@ import { takeEvery, put } from "redux-saga/effects";
 // Create the rootSaga generator function
 function* rootSaga() {
 	// ----- PHOTOS YIELDS -----
-	yield takeEvery("GET_GALLERY", allPhotos);
+	yield takeEvery("GET_GALLERY", getPhotos);
 }
 
 // SAGAS
-function* allPhotos() {
+function* getPhotos(action) {
 	try {
-		const response = yield axios.get("/");
-		yield put({ type: "SHOW_GALLERY", payload: response.data });
+		const response = yield axios.get("/bear");
+		yield put({ type: "SET_GALLERY", payload: response.data });
 	} catch (err) {
 		console.log("Error in allPhotos:", err);
 	}
@@ -32,7 +32,7 @@ const sagaMiddleware = createSagaMiddleware();
 // Used to store movies returned from the server
 const galleryReducer = (state = [], action) => {
 	switch (action.type) {
-		case "SHOW_GALLERY":
+		case "SET_GALLERY":
 			return action.payload;
 		default:
 			return state;

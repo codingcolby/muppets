@@ -7,9 +7,7 @@ class GalleryPic extends Component {
 	render() {
 		return (
 			<tr>
-				<td>
-					<img src="{this.props.smiles.imagefile}" alt="muppet images" />
-				</td>
+				<td>{this.props.smiles.imagefile}</td>
 			</tr>
 		);
 	}
