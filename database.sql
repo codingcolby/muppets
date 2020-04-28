@@ -24,15 +24,15 @@ INSERT INTO "cast" ("name", "species", "about_info") VALUES
 ('Animal', 'Wildlife', 'Carefree, fun-loving, boisterous soul that reminds us not to take ourselves too seriously');
 
 INSERT INTO "photos" ("photo_title", "photo_composition", "imagefile") VALUES
-('Kermit', 'Portrait', '/images/kermit.jpeg'),
-('Beaker', 'Ted Talk shot', '/images/beaker.jpeg'),
-('Fozzie', 'Portrait', '/images/fozzie.jpeg'),
-('Miss Piggy', 'Portrait', '/images/miss_piggy.jpeg'),
-('Statler and Waldorf', 'In their element - the box', '/images/Statler_Waldorf.jpg'),
-('Who is this again?', 'Candid', '/images/MahnaMahna.jpg'),
-('My main man', 'Mugshot', '/images/animal.jpg'),
-('He is so loveable - hold on!', 'Action shot', '/images/gonzo.jpg'),
-('PSA: Wash your hands', 'Stately', '/images/rizzo-the-rat.jpg'),
-('PSA: Take this very seriously', 'Podium shot', '/images/sam-the-eagle.jpg'),
-('Not Dr No, a Dr in the know!', 'Article feature', '/images/DrBunsenHoneydew.jpg'),
-('Making do with whatcha got', 'On the job', '/images/swedishchef.jpg');
+('Kermit', 'Portrait', '/image/kermit.jpeg'),
+('Beaker', 'Ted Talk shot', '/image/beaker.jpeg'),
+('Fozzie', 'Portrait', '/image/fozzie.jpeg'),
+('Miss Piggy', 'Portrait', '/image/miss_piggy.jpeg'),
+('Statler and Waldorf', 'In their element - the box', '/image/Statler_Waldorf.jpg'),
+('Who is this again?', 'Candid', '/image/MahnaMahna.jpg'),
+('My main man', 'Mugshot', '/image/animal.jpg'),
+('He is so loveable - hold on!', 'Action shot', '/image/gonzo.jpg'),
+('PSA: Wash your hands', 'Stately', '/image/rizzo-the-rat.jpg'),
+('PSA: Take this very seriously', 'Podium shot', '/image/sam-the-eagle.jpg'),
+('Not Dr No, a Dr in the know!', 'Article feature', '/image/DrBunsenHoneydew.jpg'),
+('Making do with whatcha got', 'On the job', '/image/swedishchef.jpg');

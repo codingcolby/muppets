@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("build"));
 
 /** ---------- ROUTES ---------- **/
-app.use("/bear", fozzieRouter);
+app.use("api/bear", fozzieRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {
