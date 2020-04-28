@@ -11,6 +11,8 @@ class PhotoGallery extends Component {
 		return (
 			<table>
 				<tbody>
+					<thead>The Photo Gallery is Grand</thead>
+				
 				
 					{GalleryPic}
 					{/* {this.props.reduxState.galleryReducer.map((smiles, i) => {

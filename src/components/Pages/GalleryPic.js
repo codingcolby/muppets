@@ -9,8 +9,7 @@ class GalleryPic extends Component {
 		return (
 			<tr>
 				<td>
-				<img src="/image/public/image/kermit.jpg" alt="some text goes here"/>
-				
+			
 				
 				</td>
 			</tr>
