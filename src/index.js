@@ -19,7 +19,7 @@ function* rootSaga() {
 // SAGAS
 function* getPhotos() {
 	try {
-		const response = yield axios.get("/api/bear/");
+		const response = yield axios.get("/");
 		yield put({ type: "SET_GALLERY", payload: response.data });
 	} catch (err) {
 		console.log("Error in allPhotos:", err);

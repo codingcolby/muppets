@@ -10,7 +10,7 @@ class App extends Component {
 				<header>
 					<h2>Our Cast of Characters</h2>
 				</header>
-				<img src="./public/image/kermit.jpg" alt="kermie" />
+				<img src="public/image/kermit.jpg" alt="kermie" />
 				{/* <PhotoGallery /> */}
 				
 			</div>
